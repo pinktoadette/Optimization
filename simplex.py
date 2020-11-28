@@ -58,7 +58,7 @@ class Simplex():
                     r = i
 
         pivot = self.tableau[r, c] 
-        self.tableau[r, 1:] = self.tableau[r, 1:] / pivot 
+        self.tableau[r, 1:] /= pivot 
         self._row_echelon(r, c)
         self._track_pivot({'pivot_row':r, 'pivot_col':c, 'pivot_at':self.tableau[r,c] } )
         
